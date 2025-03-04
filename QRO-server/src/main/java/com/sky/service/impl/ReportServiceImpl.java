@@ -218,7 +218,7 @@
          *导出运营数据Excel报表
          * @param response
          */
-        public void exportBussinessData(HttpServletResponse response) {
+        public void  exportBussinessData(HttpServletResponse response) {
             //1.查询数据库,获取运营数据(最近30天)
             LocalDate dateBegin = LocalDate.now().minusDays(30);
             LocalDate dateEnd = LocalDate.now().minusDays(1);
