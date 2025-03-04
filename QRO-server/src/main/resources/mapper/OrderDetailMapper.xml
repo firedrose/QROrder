@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.sky.mapper.OrderDetailMapper">
+<mapper namespace="com.rose.mapper.OrderDetailMapper">
 
 
     <insert id="insertBatch">
@@ -10,7 +10,7 @@
         (#{od.name},#{od.image},#{od.orderId},#{od.dishId},#{od.setmealId},#{od.dishFlavor},#{od.number},#{od.amount})
         </foreach>
     </insert>
-    <select id="getSaLesTop10" resultType="com.sky.dto.GoodsSalesDTO">
+    <select id="getSaLesTop10" resultType="com.rose.dto.GoodsSalesDTO">
         select od.name,sum(od.number) num
         from sky_take_out.order_detail od,sky_take_out.orders o
         where od.order_id=o.id and o.status=5

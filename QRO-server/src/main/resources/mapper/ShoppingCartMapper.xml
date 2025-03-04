@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.sky.mapper.ShoppingCartMapper">
+<mapper namespace="com.rose.mapper.ShoppingCartMapper">
 
 
-    <select id="list" resultType="com.sky.entity.ShoppingCart">
+    <select id="list" resultType="com.rose.entity.ShoppingCart">
         select * from sky_take_out.shopping_cart
         <where>
             <if test="userId!=null">
